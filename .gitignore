@@ -19,6 +19,6 @@ __pycache__/
 # --- Datos y Modelos ---
 # Normalmente no subes datos pesados a Git. 
 # Si tus archivos en /data son muy grandes, descomenta la siguiente línea:
-data/
+# data/
 # models/
 
