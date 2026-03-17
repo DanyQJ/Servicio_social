@@ -1,0 +1,24 @@
+# --- Entorno Virtual ---
+.venv/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+# Esto ignora archivos temporales de ejecución de notebooks
+*/.ipynb_checkpoints/*
+
+# --- Carpeta de Pruebas/Experimentos ---
+# (Asumiendo que le llamaste 'sandbox' o 'experiments')
+sandbox/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# --- Datos y Modelos ---
+# Normalmente no subes datos pesados a Git. 
+# Si tus archivos en /data son muy grandes, descomenta la siguiente línea:
+data/
+# models/
+
