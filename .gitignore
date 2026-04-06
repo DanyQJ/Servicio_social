@@ -22,3 +22,37 @@ __pycache__/
 # data/
 # models/
 
+# Latex
+bib/
+bst/
+
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.toc*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.lof
+*.lot
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.tex
