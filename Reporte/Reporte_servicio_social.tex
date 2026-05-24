@@ -1,0 +1,324 @@
+\documentclass[12pt]{article}  
+
+%%%%%%%% PREÁMBULO %%%%%%%%%%%%
+\title{Plantilla para reportes UAM}
+\usepackage[spanish]{babel} %Indica que escribiermos en español
+\usepackage[utf8]{inputenc} %Indica qué codificación se está usando ISO-8859-1(latin1)  o utf8  
+\usepackage{amsmath} % Comandos extras para matemáticas (cajas para ecuaciones,
+% etc)
+\usepackage{amssymb} % Simbolos matematicos (por lo tanto)
+\usepackage{graphicx,subfig} % Incluir imágenes en LaTeX
+\usepackage{color} % Para colorear texto
+\usepackage{subcaption} % subfiguras
+\usepackage{float} %Podemos usar el especificador [H] en las figuras para que se
+% queden donde queramos
+\usepackage{capt-of} % Permite usar etiquetas fuera de elementos flotantes
+% (etiquetas de figuras)
+\usepackage{sidecap} % Para poner el texto de las imágenes al lado
+	\sidecaptionvpos{figure}{c} % Para que el texto se alinie al centro vertical
+\usepackage{caption} % Para poder quitar numeracion de figuras
+\usepackage{commath} % funcionalidades extras para diferenciales, integrales,
+% etc (\od, \dif, etc)
+\usepackage{cancel} % para cancelar expresiones (\cancelto{0}{x})
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{comment}
+\usepackage{anysize} 					% Para personalizar el ancho de  los márgenes
+\marginsize{2cm}{2cm}{2cm}{2cm} % Izquierda, derecha, arriba, abajo
+
+\usepackage{appendix}
+\renewcommand{\appendixname}{Apéndices}
+\renewcommand{\appendixtocname}{Apéndices}
+\renewcommand{\appendixpagename}{Apéndices} 
+
+% Para que las referencias sean hipervínculos a las figuras o ecuaciones y
+% aparezcan en color
+\usepackage[colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
+%\usepackage{hyperref} 
+% Para agregar encabezado y pie de página
+\usepackage{fancyhdr} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize UAM-I} %encabezado izquierda
+\fancyhead[R]{\footnotesize Ciencias básicas e ingeniería}   % dereecha
+\fancyfoot[R]{\footnotesize Reporte de Servicio Social}  % Pie derecha
+\fancyfoot[C]{\thepage}  % centro
+\fancyfoot[L]{\footnotesize Matemáticas}  %izquierda
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\usepackage{listings} % Para usar código fuente
+\definecolor{dkgreen}{rgb}{0,0.6,0} % Definimos colores para usar en el código
+\definecolor{gray}{rgb}{0.5,0.5,0.5} 
+% configuración para el lenguaje que queramos utilizar
+\lstset{language=Matlab,
+   keywords={break,case,catch,continue,else,elseif,end,for,function,
+      global,if,otherwise,persistent,return,switch,try,while},
+   basicstyle=\ttfamily,
+   keywordstyle=\color{blue},
+   commentstyle=\color{red},
+   stringstyle=\color{dkgreen},
+   numbers=left,
+   numberstyle=\tiny\color{gray},
+   stepnumber=1,
+   numbersep=10pt,
+   backgroundcolor=\color{white},
+   tabsize=4,
+   showspaces=false,
+   showstringspaces=false}
+
+\newcommand{\sen}{\operatorname{\sen}}	% Definimos el comando \sen para el seno
+%en español
+
+\title{Plantilla para Reportes UAM}
+
+
+%%%%%%%% TERMINA PREÁMBULO %%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%-------------------- LOGOS --------------------%
+\begin{minipage}{0.48\textwidth}
+    \begin{flushleft}
+        \includegraphics[scale=0.20]{Imagenes/Logo_de_la_UAM.png}
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+    \begin{flushright}
+        \includegraphics[scale=0.30]{Imagenes/Logo_analisis.jpg}
+    \end{flushright}
+\end{minipage}
+
+\vspace*{1.0cm}
+
+%-------------------- TITULOS --------------------%
+\textsc{\huge Universidad Autónoma \\ \vspace{5px} Metropolitana}\\[1.5cm]
+
+\textsc{\LARGE Unidad Iztapalapa}\\[1.5cm]
+
+\begin{minipage}{0.9\textwidth}
+    \begin{center}
+        \textsc{\LARGE Reporte de Servicio Social}\\[0.5cm]
+    \end{center}
+\end{minipage}
+
+\vspace{1cm}
+
+%-------------------- TITULO DEL TRABAJO --------------------%
+\HRule\\[0.4cm]
+{\huge \bfseries Riesgo de Incumplimiento Crediticio}\\[0.3cm]
+\HRule\\[1.5cm]
+
+\vspace{1.5cm}
+
+%-------------------- FILA SUPERIOR --------------------%
+\begin{center}
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \rule{\textwidth}{0.4pt}\\
+    \emph{Daniel Isaac Quezada Jiménez}\\
+    \textbf{Presenta}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \rule{\textwidth}{0.4pt}\\
+    \emph{Dr. Juan Alberto Martínez Cadena}\\
+    \textbf{Asesor}
+\end{minipage}
+\end{center}
+
+\vspace{1.5cm}
+
+%-------------------- ASESOR CENTRADO ABAJO --------------------%
+\begin{center}
+\begin{minipage}{0.35\textwidth}
+    \centering
+    \rule{\textwidth}{0.4pt}\\
+    \emph{Dr. Juan Manuel Sánchez Cerritos}\\
+    \textbf{Asesor}
+\end{minipage}
+\end{center}
+
+\end{center}
+\newpage
+%%%%%%%%%%%%%%%%%%%% TERMINA PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents 
+
+\newpage
+
+\section*{Resumen.}
+
+
+\section*{Introducción.}
+
+\subsection*{Correlación de Pearson.}
+
+La \textbf{correlación de Pearson} (o coeficiente de correlación de Pearson) es una métrica estadística que se encarga de medir el grado y la dirección de la asociación lineal entre dos variables numéricas. Se trata de una versión estandarizada de la covarianza, lo que garantiza que su valor siempre se encuentre en la misma escala (de -1 a 1), independientemente de las unidades originales de los datos.\cite{ref2}\\
+
+Dependiendo de si se trabaja con toda la población o solo con una muestra, la notación y el cálculo varían ligeramente:
+
+\subsubsection*{Coeficiente de Correlación Poblacional ($\rho$)}
+
+Para una población, el coeficiente se denota con la letra griega rho ($\rho$) y se define como el cociente entre la covarianza poblacional de las variables $X$ e $Y$, y el producto de sus respectivas desviaciones estándar poblacionales\cite{ref1}:
+
+\begin{equation}
+\rho_{X,Y} = \frac{\text{cov}(X,Y)}{\sigma_X \sigma_Y} = \frac{\mathbb{E}[(X - \mu_X)(Y - \mu_Y)]}{\sigma_X \sigma_Y}
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item $\text{cov}(X,Y)$ es la covarianza poblacional entre $X$ e $Y$.
+    \item $\sigma_X, \sigma_Y$ son las desviaciones estándar de $X$ e $Y$.
+    \item $\mu_X, \mu_Y$ son las medias poblacionales o valores esperados.
+    \item $\mathbb{E}$ denota la esperanza matemática.
+\end{itemize}
+
+\subsubsection*{Coeficiente de Correlación Muestral ($r$)}
+
+En la práctica, casi siempre se trabaja con muestras. El coeficiente de correlación muestral se denota como $r$ y se calcula utilizando los valores observados $(x_i, y_i)$ de una muestra de tamaño $n$\cite{ref1}:
+
+\begin{equation}
+r_{xy} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2} \sqrt{\sum_{i=1}^{n} (y_i - \bar{y})^2}}
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item $n$ es el número de pares de observaciones.
+    \item $x_i, y_i$ representan los valores individuales de las variables para la observación $i$.
+    \item $\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i$ es la media muestral de la variable $X$.
+    \item $\bar{y} = \frac{1}{n}\sum_{i=1}^n y_i$ es la media muestral de la variable $Y$.
+\end{itemize}
+
+\subsubsection*{Interpretación de los Valores}
+
+El coeficiente de Pearson está acotado matemáticamente de la siguiente forma: $-1 \leq r \leq 1$. Su interpretación se basa en esta escala:
+
+\begin{itemize}
+    \item \textbf{$r = +1$}: \textit{Correlación positiva perfecta.} Todos los puntos $(x_i, y_i)$ se encuentran exactamente sobre una línea recta con pendiente positiva.
+    \item \textbf{$r = -1$}: \textit{Correlación negativa perfecta.} Todos los puntos se encuentran exactamente sobre una línea recta con pendiente negativa.
+    \item \textbf{$r = 0$}: \textit{Ausencia de correlación lineal.} No existe una relación lineal entre las variables (Nota: esto no implica que las variables sean independientes, ya que podría existir una fuerte relación no lineal).
+\end{itemize}
+
+\subsubsection*{Limitaciones Principales}
+
+\begin{enumerate}
+    \item \textbf{Linealidad Estricta:} Evalúa únicamente relaciones de tipo lineal. Funciones cuadráticas, exponenciales o sinusoidales pueden arrojar un $r \approx 0$ a pesar de tener una asociación determinista.
+    \item \textbf{Sensibilidad a Outliers:} Al depender fuertemente de las medias muestrales ($\bar{x}, \bar{y}$) y sumas de cuadrados, el estimador $r$ es muy sensible a valores atípicos que pueden inflar o atenuar drásticamente el valor de la correlación.
+\end{enumerate}
+
+\subsection*{Coeficiente de Correlación de Rangos de Spearman}
+
+El \textbf{coeficiente de correlación de Spearman} (frecuentemente denotado por la letra griega $\rho$ o como $r_s$) es una medida no paramétrica de la dependencia estadística de los rangos entre dos variables. A diferencia del coeficiente de Pearson, que evalúa relaciones lineales utilizando los valores brutos, el estadístico de Spearman evalúa qué tan bien se puede describir la relación entre dos variables utilizando una función monótona, basándose en la posición (rango) de los datos ordenados.\cite{ref2}\\
+
+
+Sea una muestra de tamaño $n$ de dos variables $X$ e $Y$. Primero, los $n$ valores observados de ambas variables se transforman en rangos, denotados como $\text{rg}(X_i)$ y $\text{rg}(Y_i)$. El coeficiente de Spearman general se define exactamente igual que el coeficiente de correlación de Pearson, pero aplicado sobre estas variables transformadas a rangos\cite{ref1}:
+
+\begin{equation}
+r_s = \rho_{\text{rg}_X, \text{rg}_Y} = \frac{\text{cov}(\text{rg}_X, \text{rg}_Y)}{\sigma_{\text{rg}_X} \sigma_{\text{rg}_Y}}
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item $\text{cov}(\text{rg}_X, \text{rg}_Y)$ es la covarianza muestral de las variables de rango.
+    \item $\sigma_{\text{rg}_X}$ y $\sigma_{\text{rg}_Y}$ son las desviaciones estándar muestrales de las variables de rango.
+\end{itemize}
+
+\subsubsection*{Fórmula Simplificada (Ausencia de Empates)}
+
+En aplicaciones prácticas, si todas las observaciones de $X$ y todas las de $Y$ tienen rangos distintos (es decir, no hay \textit{empates} o valores idénticos en la misma variable), la fórmula general anterior se reduce matemáticamente a una expresión computacionalmente más sencilla\cite{ref1}:
+
+\begin{equation}
+r_s = 1 - \frac{6 \sum_{i=1}^{n} d_i^2}{n(n^2 - 1)}
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item $d_i = \text{rg}(X_i) - \text{rg}(Y_i)$ es la diferencia entre los rangos correspondientes a cada par de observaciones.
+    \item $n$ es el número de observaciones emparejadas en la muestra.
+\end{itemize}
+
+\subsubsection*{Interpretación de los Valores}
+
+El coeficiente $r_s$ pertenece al intervalo $[-1, 1]$:
+\begin{itemize}
+    \item \textbf{$r_s = +1$}: \textit{Monotonía positiva perfecta.} Existe una relación monótona creciente estricta; a medida que $X$ aumenta, $Y$ siempre aumenta.
+    \item \textbf{$r_s = -1$}: \textit{Monotonía negativa perfecta.} Existe una relación monótona decreciente estricta; a medida que $X$ aumenta, $Y$ siempre disminuye.
+    \item \textbf{$r_s = 0$}: \textit{Ausencia de monotonía.} Las variables no exhiben una tendencia monótona asociada.
+\end{itemize}
+
+\subsubsection*{Propiedades Estadísticas Clave}
+\begin{enumerate}
+    \item \textbf{Robustez a valores atípicos (Outliers):} Dado que las magnitudes extremas se reducen a posiciones de rango, $r_s$ es notablemente resistente a distorsiones causadas por valores excepcionalmente altos o bajos (a diferencia de Pearson).
+    \item \textbf{Flexibilidad funcional:} Es capaz de identificar asociaciones no lineales perfectas (como $y = e^x$ o $y = x^3$) siempre y cuando la dirección de la relación (crecimiento/decrecimiento) sea consistente a lo largo del dominio.
+\end{enumerate}
+
+\section*{Objetivos}
+
+\subsection*{Objetivo General}
+Desarrollar un pipeline reproducible de ciencia de datos para modelar la probabilidad de impago (PD) y analizar tasas de impago por segmentos mediante modelos estadísticos y de machine learning, incorporando calibración, desbalance de clases y explicabilidad.
+
+\subsection*{Objetivos Particulares}
+\begin{itemize}
+    \item Implementar ingesta, limpieza y construcción del dataset analítico (definición de target de impago).
+    \item Realizar EDA y análisis de tasas de impago por segmentos (tablas y visualizaciones).
+    \item Entrenar un modelo baseline (regresión logística) y modelos ML (p.ej., Random Forest, Gradient Boosting).
+    \item Tratar explícitamente el desbalance (ponderación de clases, submuestreo/SMOTE, comparación).
+    \item Evaluar desempeño con métricas de clasificación y calibración: AUC-ROC, PR-AUC, Brier score, curvas de calibración.
+    \item Incorporar explicabilidad (importancia de variables / SHAP) y análisis de sesgos por subgrupos.
+    \item Documentar buenas prácticas de reproducibilidad (control de versiones, entorno, data dictionary y pruebas).
+\end{itemize}
+
+\section{Metodología.}
+
+
+
+\section{Resultados.}
+
+
+\section{Conclusiones.}
+
+
+%%%%%%% Bibliografía %%%%%%%%
+\bibliographystyle{bst/IEEEtran.bst} 
+\addcontentsline{toc}{section}{Referencias}  
+\bibliography{bib/IEEEabrv,bib/IEEEreferencias.bib} 
+%%%%%%% Bibliografía %%%%%%%%    
+
+\appendix  
+\clearpage % o \cleardoublepage
+\addappheadtotoc 
+\appendixpage 
+
+\section{Memoria de cálculos.}
+
+Digitalice sus manuscritos y los procedimientos de cálculo utilizados. Deben ser legibles y claros.
+
+< Documentos escaneados> con algunas explicaciones.
+
+Si prefiere escribir todos sus calculos usando fórmulas de LATEX hágalo a través de la metodología.
+
+\section{Algoritmos.}
+
+ Anexe copia en texto aquí y  de los algoritmos y demás archivos de soportes utilizados (documentos de Scilab, Maxima, NX, etc...).
+ 
+ Los mismos archivos deben ser suplidos en forma digital en un archivo comprimido acompañando la entrea de este PDF.
+ 
+ Aqui puede colocar capturas de pantalla de sus modelos en NX. 
+ 
+ 
+ \section{Planos}
+Los planos del deiseño presentado deben estar aquí. Generados por NX/Solid-edge.
+
+Haec quae dicis admodum in omni tempore semper cómoi tu dicas dicere. Et ne forte dicant quod duplex est. Plurrimi maximus res est cogitans in quam solvitur quaestio satis perspicuum parcentes nulla divisio requiritur moralis accurate perpensis omnibus iudiciis et certa . Electus quisque valet mensura .
+Haec quae dicis admodum in omni tempore semper cómoi tu dicas dicere. Et ne forte dicant quod duplex est. Plurrimi maximus res est cogitans in quam solvitur quaestio satis perspicuum parcentes nulla divisio requiritur moralis accurate perpensis omnibus iudiciis et certa . Electus quisque valet mensura .
+Haec quae dicis admodum in omni tempore semper cómoi tu dicas dicere. Et ne forte dicant quod duplex est. Plurrimi maximus res est cogitans in quam solvitur quaestio satis perspicuum parcentes nulla divisio requiritur moralis accurate perpensis omnibus iudiciis et certa . Electus quisque valet mensura .
+
+\end{document}
