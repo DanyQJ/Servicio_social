@@ -23,8 +23,6 @@ __pycache__/
 # models/
 
 # Latex
-bib/
-bst/
 
 *.aux
 *.bbl
